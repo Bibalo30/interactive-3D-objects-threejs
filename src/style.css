@@ -1,0 +1,60 @@
+body {
+  overflow: hidden;
+  margin: 0px;
+}
+
+.btnSphere {
+  position: absolute;
+  bottom: 160px;
+  /* Adjust the bottom position as needed */
+  left: 21%;
+  /* Center the button horizontally */
+  transform: translateX(-50%);
+  /* Center the button horizontally */
+  padding: 20px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 28px;
+
+}
+
+.btnSphere:hover {
+  background-color: #0056b3;
+}
+
+.btnCube {
+  position: absolute;
+  bottom: 160px;
+  /* Adjust the bottom position as needed */
+  left: 50%;
+  /* Center the button horizontally */
+  transform: translateX(-50%);
+  /* Center the button horizontally */
+  padding: 20px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.tittle {
+  position: absolute;
+  top: 50px;
+  /* Adjust the bottom position as needed */
+  left: 50%;
+  /* Center the button horizontally */
+  transform: translateX(-50%);
+  /* Center the button horizontally */
+  padding: 50px 50px;
+  background-color: transparent;
+  color: white;
+  border: 5px solid #007bff;
+  border-radius: 5%;
+
+  font-size: 40px;
+}
