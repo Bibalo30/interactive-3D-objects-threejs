@@ -5,7 +5,7 @@ body {
 
 .btnSphere {
   position: absolute;
-  bottom: 160px;
+  bottom: 210px;
   /* Adjust the bottom position as needed */
   left: 21%;
   /* Center the button horizontally */
@@ -21,19 +21,50 @@ body {
 
 }
 
-.btnSphere:hover {
-  background-color: #0056b3;
+.btnSphereReset {
+  position: absolute;
+  bottom: 110px;
+  /* Adjust the bottom position as needed */
+  left: 21%;
+  /* Center the button horizontally */
+  transform: translateX(-50%);
+  /* Center the button horizontally */
+  padding: 20px 59px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 28px;
 }
+
 
 .btnCube {
   position: absolute;
-  bottom: 160px;
+  bottom: 210px;
   /* Adjust the bottom position as needed */
   left: 50%;
   /* Center the button horizontally */
   transform: translateX(-50%);
   /* Center the button horizontally */
-  padding: 20px 30px;
+  padding: 20px 60px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.btnCubeReset {
+  position: absolute;
+  bottom: 110px;
+  /* Adjust the bottom position as needed */
+  left: 50%;
+  /* Center the button horizontally */
+  transform: translateX(-50%);
+  /* Center the button horizontally */
+  padding: 20px 59px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -57,4 +88,10 @@ body {
   border-radius: 5%;
 
   font-size: 40px;
+}
+
+
+
+.btns:hover {
+  background-color: #0056b3;
 }
