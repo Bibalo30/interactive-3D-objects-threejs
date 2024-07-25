@@ -15,23 +15,39 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix()
   renderer.setSize(window.innerWidth, window.innerHeight)
 })
-
-const geometry = new THREE.BoxGeometry()
-const material = new THREE.MeshNormalMaterial({ wireframe: false })
-const material2 = new THREE.MeshNormalMaterial({ wireframe: true })
 const radius = .3;
 let widthSegments = 1;
 let heightSegments = 1;
-const sphereGeometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
 
+const sphereGeometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
+const geometry = new THREE.BoxGeometry()
+//const thorusGeometry = new THREE.TorusGeometry()
+
+const material = new THREE.MeshNormalMaterial({ wireframe: false })
+const material2 = new THREE.MeshNormalMaterial({ wireframe: true })
+
+
+/*const torRadius;
+const torTubeRadius;
+const torRaidialSegments;
+const torTubularSegments; */
+
+
+let cubeScale = .1;
+//cubescaleFinalValue = .35
 const sphere = new THREE.Mesh(sphereGeometry, material2);
 const cube = new THREE.Mesh(geometry, material)
 
+
 const btnSphere = document.querySelector('.btnSphere');
 const btnSphereReset = document.querySelector('.btnSphereReset');
-let resetSphere = false;
+const btnCube = document.querySelector('.btnCube');
+const btnCubeReset = document.querySelector('.btnCubeReset');
 
-cube.scale.set(.35, .35, .35);
+let resetSphere = false;
+let resetCube = false;
+
+cube.scale.set(cubeScale, cubeScale, cubeScale);
 cube.position.set(0, .1, 0);
 sphere.position.set(-1.3, .1, 0)
 scene.add(cube)
@@ -119,6 +135,60 @@ function resetSegments() {
   updateSegments();
   //resetSphere = false;
 }
+
+btnCube.addEventListener('click', function () {
+  let targetCubeScale = 0.35;
+  let scaleStep = 0.01;
+
+  if (resetCube === false) {
+    scaleCube();
+    btnCube.disabled = true;
+  }
+
+  function scaleCube() {
+    if (cubeScale < targetCubeScale) {
+      cubeScale += scaleStep;
+      cube.scale.set(cubeScale, cubeScale, cubeScale);
+    }
+
+    if (cubeScale < targetCubeScale) {
+      requestAnimationFrame(scaleCube);
+    }
+    else {
+      btnCube.disabled = false;
+      resetCube = true;
+    }
+  }
+
+  scaleCube();
+});
+
+btnCubeReset.addEventListener('click', function () {
+  let targetCubeScale = 0.1; // Set the target scale to the initial scale
+  let scaleStep = 0.01;
+
+  if (resetCube === true) {
+    scaleCubeReset();
+    btnCubeReset.disabled = true;
+  }
+
+  function scaleCubeReset() { // Rename the function to avoid conflict
+    if (cubeScale >= targetCubeScale) {
+      cubeScale -= scaleStep;
+      cube.scale.set(cubeScale, cubeScale, cubeScale);
+    }
+
+    if (cubeScale >= targetCubeScale) {
+      requestAnimationFrame(scaleCubeReset);
+    }
+    else {
+      btnCubeReset.disabled = false;
+      resetCube = false;
+    }
+  }
+
+  scaleCubeReset();
+});
 
 function animate() {
   requestAnimationFrame(animate)// Request the browser to call animate() on the next frame
