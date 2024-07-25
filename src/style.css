@@ -73,6 +73,40 @@ body {
   font-size: 28px;
 }
 
+.btnTorus {
+  position: absolute;
+  bottom: 210px;
+  /* Adjust the bottom position as needed */
+  left: 79%;
+  /* Center the button horizontally */
+  transform: translateX(-50%);
+  /* Center the button horizontally */
+  padding: 20px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.btnTorusReset {
+  position: absolute;
+  bottom: 110px;
+  /* Adjust the bottom position as needed */
+  left: 79%;
+  /* Center the button horizontally */
+  transform: translateX(-50%);
+  /* Center the button horizontally */
+  padding: 20px 59px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 28px;
+}
+
 .tittle {
   position: absolute;
   top: 50px;
