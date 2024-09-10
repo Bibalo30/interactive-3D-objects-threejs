@@ -13,5 +13,9 @@
     "three": "^0.166.1",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
+  },
+  "dependencies": {
+    "@tsparticles/all": "^3.5.0",
+    "particle.js": "^1.0.7"
   }
 }
