@@ -5,4 +5,4 @@ Webpage created using threeJS.
 Animated 3D objects displayed in html file and are responsive to the buttons,
 each object has a different behaivor.
 
-JS, threeJS, HTML, CSS.
+JS, typeScript, threeJS, HTML, CSS.
